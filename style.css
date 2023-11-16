@@ -23,7 +23,7 @@ div {
 }
 
 div.text {
-    background: linear-gradient(90deg, rgb(255, 0, 0), rgb(234, 0, 255), rgb(0, 110, 255), rgb(208, 255, 0));
+    /* background: linear-gradient(90deg, rgb(255, 0, 0), rgb(234, 0, 255), rgb(0, 110, 255), rgb(208, 255, 0)); */
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
