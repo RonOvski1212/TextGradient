@@ -27,10 +27,20 @@ function randomColor() {
 function changeGradient() {
   const text = document.querySelector(".text");
   const shadow = document.querySelector(".shadow");
-  const gradient = `linear-gradient(90deg, ${randomColor()}, ${randomColor()}, ${randomColor()}, ${randomColor()})`;
+  const gradient = `linear-gradient(160deg, ${randomColor()}, ${randomColor()}, ${randomColor()}, ${randomColor()}, ${randomColor()}, ${randomColor()}, ${randomColor()}, ${randomColor()}, ${randomColor()}, ${randomColor()}, ${randomColor()}, ${randomColor()}, ${randomColor()}, ${randomColor()}, ${randomColor()}, ${randomColor()}, ${randomColor()}, ${randomColor()}, ${randomColor()}, ${randomColor()}, ${randomColor()}, ${randomColor()}, ${randomColor()}, ${randomColor()}, ${randomColor()},${randomColor()})`;
   const textShadow = `8px 2px 5px ${randomColor()}`;
   text.style.backgroundImage = gradient;
   shadow.style.textShadow = textShadow;
 }
 
-setInterval(changeGradient, 400);
+let interval;
+const inputSpeed = document.querySelector("#volume");
+function handleSpeedChange() {
+  const speed = parseFloat(inputSpeed.value);
+  clearInterval(interval);
+  interval = setInterval(changeGradient, speed * 50);
+}
+
+inputSpeed.addEventListener("input", handleSpeedChange);
+
+handleSpeedChange();

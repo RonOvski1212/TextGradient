@@ -7,28 +7,42 @@
     font-family: "poppins", "sans-serif";
 }
 
+
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 60vh;
     background: rgb(29, 28, 28);
+    overflow: hidden;
 }
 
-div {
+.container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.text,
+.shadow {
     position: absolute;
-    font-size: 7em;
+    font-size: 6em;
     text-transform: uppercase;
     letter-spacing: 10px;
-}
-
-div.text {
-    /* background: linear-gradient(90deg, rgb(255, 0, 0), rgb(234, 0, 255), rgb(0, 110, 255), rgb(208, 255, 0)); */
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    margin: 0 auto;
 }
 
 div.shadow {
-    text-shadow: 8px 2px 5px rgb(0, 255, 0);
+    text-shadow: 8px 2px 5px rgb(20, 20, 20);
     z-index: -1;
+    transition: text-shadow 2s;
+}
+
+#volume {
+    margin-top: 390px;
+
 }
